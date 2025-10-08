@@ -31,8 +31,7 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="text-xl font-bold mb-2">Kontakt</h3>
-          <p>E-Mail: max.mustermann@bluewin.ch</p>
-          <p>Telefon: 111 111 22 22</p>
+          <p>E-Mail: noah.balzan@bluewin.ch</p>
         </div>
       </div>
     </footer>

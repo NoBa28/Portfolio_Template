@@ -1,9 +1,33 @@
-import { useState } from "react";
 import HeaderIconCode from "./icons/HeaderIconCode";
 import ButtonHamburger from "./ButtonHamburger";
+import { Link } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const mobileMenuRef = useRef(null);
+
+  {
+    /* Close mobile menu on outside click */
+  }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <header>
@@ -18,25 +42,22 @@ export default function Header() {
           {/* Navigation Links */}
           <ul className="hidden md:flex space-x-6">
             <li>
-              <a
-                href="#about"
-                className="hover:text-green-500 transition-colors"
-              >
+              <Link to="/" className="hover:text-green-500 transition-colors">
                 Über mich
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#cv" className="hover:text-green-500 transition-colors">
+              <Link to="/cv" className="hover:text-green-500 transition-colors">
                 Lebenslauf
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#languages"
+              <Link
+                to="/skills"
                 className="hover:text-green-500 transition-colors"
               >
-                Programmiersprachen
-              </a>
+                Fähigkeiten
+              </Link>
             </li>
           </ul>
 
@@ -46,27 +67,36 @@ export default function Header() {
 
         {/* Hamburger Menu Icon for Mobile */}
         {isOpen && (
-          <ul className="bg-green-950 px-4 py-2 space-y-2 md:hidden">
+          <ul
+            ref={mobileMenuRef}
+            className="bg-green-950 px-4 py-2 space-y-2 md:hidden"
+          >
             <li>
-              <a
-                href="#about"
+              <Link
+                to="/"
                 className="hover:text-green-500 transition-colors"
+                onClick={() => setIsOpen(false)}
               >
                 Über mich
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#cv" className="hover:text-green-500 transition-colors">
-                Lebenslauf
-              </a>
-            </li>
-            <li>
-              <a
-                href="#languages"
+              <Link
+                to="/cv"
                 className="hover:text-green-500 transition-colors"
+                onClick={() => setIsOpen(false)}
               >
-                Programmiersprachen
-              </a>
+                Lebenslauf
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/skills"
+                className="hover:text-green-500 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Fähigkeiten
+              </Link>
             </li>
           </ul>
         )}
