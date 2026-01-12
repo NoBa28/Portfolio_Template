@@ -43,6 +43,14 @@ export default function Header() {
           <ul className="hidden md:flex space-x-6">
             <li>
               <Link to="/" className="hover:text-green-500 transition-colors">
+                Startseite
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="hover:text-green-500 transition-colors"
+              >
                 Über mich
               </Link>
             </li>
@@ -74,6 +82,15 @@ export default function Header() {
             <li>
               <Link
                 to="/"
+                className="hover:text-green-500 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Startseite
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
                 className="hover:text-green-500 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
