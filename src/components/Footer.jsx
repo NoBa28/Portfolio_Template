@@ -2,7 +2,7 @@ import { FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-950 text-white py-4">
+    <footer className="bg-slate-950 text-slate-200 py-4">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <p>
           &copy; {new Date().getFullYear()} Noah Balzan. Alle Rechte
@@ -14,7 +14,7 @@ export default function Footer() {
             href="https://github.com/NoBa28"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 hover:text-green-500 transition-colors"
+            className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
           >
             <FaGithub size={20} />
             <span>GitHub</span>
@@ -23,7 +23,7 @@ export default function Footer() {
             href="https://www.instagram.com/nooah28"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 hover:text-green-500 transition-colors"
+            className="flex items-center space-x-2 hover:text-cyan-400 transition-colors"
           >
             <FaInstagram size={20} />
             <span>Instagram</span>
