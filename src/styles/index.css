@@ -8,5 +8,5 @@
 
 .animate-blink {
   animation: blink 1s step-start infinite;
-  color: #06b6d4; /* Cyan passend zu deinem Theme */
+  color: #06b6d4; /* cyan matching to theme */
 }

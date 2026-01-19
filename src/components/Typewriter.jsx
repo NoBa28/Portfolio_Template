@@ -3,7 +3,7 @@ import { useSequential } from "./SequentialController";
 
 export default function Typewriter({ text, speed = 50, className = "" }) {
   const [displayed, setDisplayed] = useState("");
-  const [isTyping, setIsTyping] = useState(false); // Cursor-Status
+  const [isTyping, setIsTyping] = useState(false); // cursor-status
   const ref = useRef(null);
   const triggeredRef = useRef(false);
   const { register } = useSequential();
@@ -15,18 +15,18 @@ export default function Typewriter({ text, speed = 50, className = "" }) {
           triggeredRef.current = true;
           observer.disconnect();
 
-          // Animation in Queue registrieren
+          // register animation in queue
           register(
             () =>
               new Promise((resolve) => {
-                setIsTyping(true); // Cursor starten
+                setIsTyping(true); // start cursor
                 let i = 0;
                 const timer = setInterval(() => {
                   setDisplayed(text.slice(0, i + 1));
                   i++;
                   if (i === text.length) {
                     clearInterval(timer);
-                    setIsTyping(false); // Cursor verschwinden
+                    setIsTyping(false); // disappear cursor
                     resolve();
                   }
                 }, speed);
