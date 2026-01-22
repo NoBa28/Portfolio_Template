@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef } from "react";
+import { createContext, useRef } from "react";
 
 const SequentialContext = createContext();
 
@@ -30,4 +30,4 @@ export function SequentialProvider({ children }) {
   );
 }
 
-export const useSequential = () => useContext(SequentialContext);
+export { SequentialContext };

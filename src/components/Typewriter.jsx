@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useSequential } from "./SequentialController";
+import { useSequential } from "../hooks/useSequential";
 
 export default function Typewriter({ text, speed = 50, className = "" }) {
   const [displayed, setDisplayed] = useState("");
