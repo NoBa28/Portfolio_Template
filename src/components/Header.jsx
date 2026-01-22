@@ -44,22 +44,31 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="bg-slate-950 text-slate-200 border-b border-slate-800 w-full fixed top-0 left-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
+      <nav className="bg-slate-950/95 backdrop-blur-md text-slate-200 border-b border-slate-800/50 w-full fixed top-0 left-0 z-50 shadow-lg shadow-slate-900/20">
+        <div className="max-w-7xl mx-auto px-6 h-18 flex justify-between items-center">
           {/* logo + title */}
-          <div className="flex items-center space-x-2">
-            <HeaderIconCode className="inline align-middle w-5 h-5 text-white" />
-            <h1 className="text-2xl font-bold">Noah Balzan</h1>
-          </div>
+          <Link to="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
+            <div className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-colors">
+              <HeaderIconCode className="w-5 h-5 text-cyan-400" />
+            </div>
+            <h1 className="text-xl font-bold text-white hover:text-cyan-300 transition-colors">Noah Balzan</h1>
+          </Link>
 
           {/* desktop navigation links */}
-          <ul className="hidden md:flex space-x-6">
+          <ul className="hidden md:flex space-x-1">
             {navLinks.map(({ to, label }) => (
               <li key={to}>
-                <Link to={to} className={getLinkClass(to)}>
+                <Link
+                  to={to}
+                  className={`${getLinkClass(to)} px-4 py-2 rounded-lg hover:bg-slate-800/50 transition-all duration-300 relative group`}
+                >
                   {/* gray "//" like comment */}
                   <span className="text-slate-500">// </span>
                   {label}
+                  {/* Active indicator */}
+                  {location.pathname === to && (
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-cyan-400 rounded-full"></div>
+                  )}
                 </Link>
               </li>
             ))}
