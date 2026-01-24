@@ -2,25 +2,26 @@ import Typewriter from "../components/Typewriter";
 import { SequentialProvider } from "../components/SequentialController";
 import PageContainer from "../components/PageContainer";
 import { TYPE_SPEED_TITLE, TYPE_SPEED_TEXT } from "../constants";
+import { FaBullseye, FaLightbulb, FaUsers, FaBook } from "react-icons/fa";
 
 const values = [
   {
-    icon: "🎯",
+    icon: <FaBullseye className=" text-3xl mb-4" />,
     title: "Präzision",
     description: "Achte auf Details und liefere sauberen, wartbaren Code.",
   },
   {
-    icon: "🚀",
+    icon: <FaLightbulb className=" text-3xl mb-4" />,
     title: "Innovation",
     description: "Halte mich über neue Technologien auf dem Laufenden.",
   },
   {
-    icon: "🤝",
+    icon: <FaUsers className=" text-3xl mb-4" />,
     title: "Zusammenarbeit",
     description: "Werte Teamarbeit und offene Kommunikation.",
   },
   {
-    icon: "📚",
+    icon: <FaBook className=" text-3xl mb-4" />,
     title: "Lernen",
     description: "Lebenslanges Lernen ist der Schlüssel zum Erfolg.",
   },
@@ -188,7 +189,9 @@ export default function About() {
                   border border-slate-700/50 hover:border-cyan-500/30 min-h-[250px] md:min-h-[280px] flex flex-col"
                 >
                   {/* Icon */}
-                  <div className="text-5xl mb-6">{icon}</div>
+                  <div className="flex justify-center items-center mb-4">
+                    {icon}
+                  </div>
 
                   <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors">
                     <Typewriter
@@ -207,8 +210,10 @@ export default function About() {
                   </p>
 
                   {/* Hover effect accent */}
-                  <div className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
-                    rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div
+                    className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
+                    rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
               ))}
             </div>
@@ -236,46 +241,48 @@ export default function About() {
             <div className="grid gap-8 md:grid-cols-3">
               {personalInterests.map(({ category, items }) => (
                 <div
-                   key={category}
-                   className="group bg-gradient-to-br from-slate-800/70 to-slate-900/50
+                  key={category}
+                  className="group bg-gradient-to-br from-slate-800/70 to-slate-900/50
                    backdrop-blur rounded-3xl p-8 hover:shadow-2xl hover:shadow-cyan-500/20
                    transition-all duration-300 hover:-translate-y-2 border border-slate-700/30 hover:border-cyan-500/30
                    min-h-[250px] md:min-h-[280px] flex flex-col"
-                 >
-                   {/* Category header */}
-                   <div className="mb-6">
-                     <h3 className="text-xl font-bold text-white">
-                       <Typewriter
-                         text={category}
-                         className="typewriter-cursor"
-                         speed={TYPE_SPEED_TITLE}
-                       />
-                     </h3>
-                   </div>
+                >
+                  {/* Category header */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-white">
+                      <Typewriter
+                        text={category}
+                        className="typewriter-cursor"
+                        speed={TYPE_SPEED_TITLE}
+                      />
+                    </h3>
+                  </div>
 
-                   {/* Interest items */}
-                   <div className="space-y-4 flex-1">
-                     {items.map((item) => (
-                       <div key={item} className="flex items-start group/item">
-                         <div
-                           className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-4 flex-shrink-0
+                  {/* Interest items */}
+                  <div className="space-y-4 flex-1">
+                    {items.map((item) => (
+                      <div key={item} className="flex items-start group/item">
+                        <div
+                          className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-4 flex-shrink-0
                            group-hover/item:scale-125 transition-transform duration-200"
-                         ></div>
-                         <span className="text-slate-300 leading-relaxed group-hover/item:text-slate-200 transition-colors">
-                           <Typewriter
-                             text={item}
-                             className="typewriter-cursor"
-                             speed={TYPE_SPEED_TEXT}
-                           />
-                         </span>
-                       </div>
-                     ))}
-                   </div>
+                        ></div>
+                        <span className="text-slate-300 leading-relaxed group-hover/item:text-slate-200 transition-colors">
+                          <Typewriter
+                            text={item}
+                            className="typewriter-cursor"
+                            speed={TYPE_SPEED_TEXT}
+                          />
+                        </span>
+                      </div>
+                    ))}
+                  </div>
 
-                   {/* Hover effect accent */}
-                   <div className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
-                     rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                 </div>
+                  {/* Hover effect accent */}
+                  <div
+                    className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
+                     rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                </div>
               ))}
             </div>
           </div>

@@ -2,41 +2,42 @@ import Typewriter from "../components/Typewriter";
 import { SequentialProvider } from "../components/SequentialController";
 import PageContainer from "../components/PageContainer";
 import { TYPE_SPEED_TITLE, TYPE_SPEED_TEXT } from "../constants";
+import { FaLaptopCode, FaGlobe, FaDatabase } from "react-icons/fa";
 
 const skillCategories = [
   {
     category: "Programmiersprachen",
-    icon: "💻",
+    icon: <FaLaptopCode className=" text-3xl mb-4" />,
     skills: [
       { name: "Java", level: 5 },
       { name: "C", level: 5 },
       { name: "C#", level: 4 },
       { name: "JavaScript", level: 4 },
       { name: "Python", level: 2 },
-    ]
+    ],
   },
   {
     category: "Web-Technologien",
-    icon: "🌐",
+    icon: <FaGlobe className=" text-3xl mb-4" />,
     skills: [
       { name: "React", level: 3 },
       { name: "Node.js", level: 3 },
       { name: "HTML5", level: 3 },
       { name: "CSS3", level: 3 },
       { name: "Tailwind CSS", level: 3 },
-    ]
+    ],
   },
   {
     category: "Datenbanken & Tools",
-    icon: "🛠️",
+    icon: <FaDatabase className=" text-3xl mb-4" />,
     skills: [
       { name: "SQL", level: 5 },
       { name: "NoSQL", level: 4 },
       { name: "C-tree", level: 5 },
       { name: "Git / GitHub", level: 4 },
       { name: "SVN (TortoiseSVN)", level: 4 },
-    ]
-  }
+    ],
+  },
 ];
 
 function Stars({ level }) {
@@ -79,49 +80,54 @@ export default function Skills() {
             />
           </p>
 
-           {/* Skills Categories */}
-           <div className="grid gap-8 md:grid-cols-3">
-             {skillCategories.map(({ category, icon, skills }) => (
-               <div
-                 key={category}
-                 className="group bg-slate-800/70 backdrop-blur rounded-2xl p-6
+          {/* Skills Categories */}
+          <div className="grid gap-8 md:grid-cols-3">
+            {skillCategories.map(({ category, icon, skills }) => (
+              <div
+                key={category}
+                className="group bg-slate-800/70 backdrop-blur rounded-2xl p-6
                  hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2
                  border border-slate-700/50 hover:border-cyan-500/30 min-h-[250px] md:min-h-[280px] flex flex-col"
-               >
-                 {/* Category Header */}
-                 <div className="flex items-center mb-6">
-                   <span className="text-2xl mr-3">{icon}</span>
-                   <h3 className="text-xl font-bold text-cyan-400">
-                     <Typewriter
-                       text={category}
-                       className="typewriter-cursor"
-                       speed={TYPE_SPEED_TITLE}
-                     />
-                   </h3>
-                 </div>
+              >
+                {/* Category Header */}
+                <div className="flex items-center mb-6">
+                  <span className="text-2xl mr-3">{icon}</span>
+                  <h3 className="text-xl font-bold text-cyan-400">
+                    <Typewriter
+                      text={category}
+                      className="typewriter-cursor"
+                      speed={TYPE_SPEED_TITLE}
+                    />
+                  </h3>
+                </div>
 
-                 {/* Skills List */}
-                 <div className="space-y-4 flex-1">
-                   {skills.map(({ name, level }) => (
-                     <div key={name} className="flex items-center justify-between">
-                       <span className="text-slate-300 text-sm font-medium">
-                         <Typewriter
-                           text={name}
-                           className="typewriter-cursor"
-                           speed={TYPE_SPEED_TEXT}
-                         />
-                       </span>
-                       <Stars level={level} />
-                     </div>
-                   ))}
-                 </div>
+                {/* Skills List */}
+                <div className="space-y-4 flex-1">
+                  {skills.map(({ name, level }) => (
+                    <div
+                      key={name}
+                      className="flex items-center justify-between"
+                    >
+                      <span className="text-slate-300 text-sm font-medium">
+                        <Typewriter
+                          text={name}
+                          className="typewriter-cursor"
+                          speed={TYPE_SPEED_TEXT}
+                        />
+                      </span>
+                      <Stars level={level} />
+                    </div>
+                  ))}
+                </div>
 
-                 {/* Hover effect accent */}
-                 <div className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
-                   rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
-             ))}
-           </div>
+                {/* Hover effect accent */}
+                <div
+                  className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
+                   rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+            ))}
+          </div>
         </section>
       </PageContainer>
     </SequentialProvider>

@@ -1,8 +1,14 @@
-import { FaInstagram, FaGithub, FaArrowUp } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaGithub,
+  FaArrowUp,
+  FaEnvelope,
+  FaMapMarkedAlt,
+} from "react-icons/fa";
 
 export default function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -19,7 +25,8 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">Noah Balzan</h3>
             <p className="text-slate-400 leading-relaxed">
-              Full Stack Developer, der komplexe Probleme in elegante digitale Lösungen verwandelt.
+              Full Stack Developer, der komplexe Probleme in elegante digitale
+              Lösungen verwandelt.
             </p>
             <p className="text-sm text-slate-500">
               &copy; {new Date().getFullYear()} Alle Rechte vorbehalten.
@@ -28,7 +35,9 @@ export default function Footer() {
 
           {/* Social Media */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white mb-4">Soziale Medien</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">
+              Soziale Medien
+            </h3>
             <div className="space-y-3">
               <a
                 href="https://github.com/NoBa28"
@@ -59,12 +68,19 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-white mb-4">Kontakt</h3>
             <div className="space-y-2">
-              <p className="flex items-center space-x-2">
-                <span className="text-cyan-400">📧</span>
+              <a
+                href="mailto:noah.balzan@bluewin.ch"
+                className="flex items-center space-x-3 hover:text-cyan-400 transition-all duration-300 group"
+              >
+                <div className="p-2 bg-slate-800/50 rounded-lg group-hover:bg-cyan-500/10 transition-colors">
+                  <FaEnvelope size={18} />
+                </div>
                 <span className="text-slate-300">noah.balzan@bluewin.ch</span>
-              </p>
-              <p className="flex items-center space-x-2">
-                <span className="text-cyan-400">📍</span>
+              </a>
+              <p className="flex items-center space-x-3">
+                <div className="p-2 bg-slate-800/50 rounded-lg group-hover:bg-cyan-500/10 transition-colors">
+                  <FaMapMarkedAlt size={18} />
+                </div>
                 <span className="text-slate-300">Schweiz</span>
               </p>
             </div>
@@ -80,7 +96,10 @@ export default function Footer() {
               text-cyan-300 rounded-lg transition-all duration-300 hover:scale-105 group border border-cyan-500/20"
             >
               <span>Nach oben</span>
-              <FaArrowUp className="group-hover:-translate-y-1 transition-transform" size={14} />
+              <FaArrowUp
+                className="group-hover:-translate-y-1 transition-transform"
+                size={14}
+              />
             </button>
           </div>
         </div>

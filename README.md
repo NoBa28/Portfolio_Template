@@ -1,16 +1,75 @@
-# React + Vite
+# Noah Balzan - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React 19, Vite, and Tailwind CSS, featuring sophisticated animations and a sleek dark theme design.
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React 19.1.1
+- **Build Tool:** Vite 7.1.7
+- **Styling:** Tailwind CSS 4.1.13
+- **Routing:** React Router DOM 7.9.4
+- **Icons:** React Icons 5.5.0
+- **Code Quality:** ESLint 9.36.0
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to localhost
+
+## Key Features Explained
+
+### Sequential Animation System
+The portfolio uses a custom animation system that creates a wave-like text appearance:
+- Animations trigger when elements enter the viewport
+- Text appears character-by-character using the Typewriter component
+- Queue-based execution ensures animations run in order
+- Performance optimized with Intersection Observer
+
+### Responsive Design
+- Mobile-first approach with breakpoints at `md:` and `lg:`
+- Collapsible navigation for mobile devices
+- Flexible grid layouts for content sections
+- Touch-friendly interactions and hover states
+
+### Glass Morphism Design
+- Semi-transparent cards with backdrop blur effects
+- Cyan accent colors for visual hierarchy
+- Smooth hover animations with shadow and translation effects
+- Consistent spacing using Tailwind's utility classes
+
+## Available Scripts
+
+```bash
+npm run dev          # Start development server with hot reload
+npm run build        # Build for production
+npm run preview      # Preview production build locally
+npm run lint         # Run ESLint for code quality checks
+```
+
+## Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Android Chrome)

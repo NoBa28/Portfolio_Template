@@ -1,7 +1,15 @@
 import Typewriter from "../components/Typewriter";
 import { SequentialProvider } from "../components/SequentialController";
 import PageContainer from "../components/PageContainer";
-import { FaChevronDown } from "react-icons/fa";
+import {
+  FaChevronDown,
+  FaChartBar,
+  FaCode,
+  FaRocket,
+  FaReact,
+  FaCheckCircle,
+  FaPaintBrush,
+} from "react-icons/fa";
 import {
   TYPE_SPEED_HERO,
   TYPE_SPEED_TEXT,
@@ -11,35 +19,35 @@ import {
 const stats = [
   { number: "50+", label: "Projekte abgeschlossen" },
   { number: "3+", label: "Jahre Erfahrung" },
-  { number: "100%", label: "Kundenzufriedenheit" }
+  { number: "100%", label: "Kundenzufriedenheit" },
 ];
 
 const testimonials = [
   {
     text: "Noah's Arbeit ist außergewöhnlich. Sauberer Code und kreative Lösungen.",
-    author: "Projektmanager, TechCorp"
+    author: "Projektmanager, TechCorp",
   },
   {
     text: "Professionell, zuverlässig und immer pünktlich. Sehr empfehlenswert!",
-    author: "CEO, StartupXYZ"
-  }
+    author: "CEO, StartupXYZ",
+  },
 ];
 
 const focusCards = [
   {
     title: "Frontend",
     text: "Moderne React-Anwendungen mit TypeScript, Tailwind CSS und optimierter Performance.",
-    icon: "⚛️"
+    icon: <FaReact className=" text-3xl mb-4" />,
   },
   {
     title: "Code Quality",
     text: "Sauberer, wartbarer Code mit Fokus auf Testing, Dokumentation und Best Practices.",
-    icon: "🎯"
+    icon: <FaCheckCircle className=" text-3xl mb-4" />,
   },
   {
     title: "UX & Design",
     text: "Benutzerzentrierte Designs mit intuitiver Navigation und ansprechender Ästhetik.",
-    icon: "🎨"
+    icon: <FaPaintBrush className=" text-3xl mb-4" />,
   },
 ];
 
@@ -47,7 +55,7 @@ export default function Home() {
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -83,7 +91,7 @@ export default function Home() {
 
           <p className="text-sm md:text-lg text-slate-400 max-w-2xl mx-auto mb-6 md:mb-12 leading-relaxed line-clamp-4">
             <Typewriter
-              text="Spezialisiert auf moderne Webtechnologien, skalierbare Architekturen und benutzerzentrierte Designs."
+              text="Spezialisiert auf Entwicklung und Erweiterung von Businessoftware mit Fokus auf ERP-Systeme im Unternehmensumfeld."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />
@@ -91,16 +99,20 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-row gap-3 md:gap-4 justify-center items-center">
-            <button className="px-4 py-2 md:px-8 md:py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold rounded-lg md:rounded-xl
-              text-xs md:text-base transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+            <button
+              className="px-4 py-2 md:px-8 md:py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold rounded-lg md:rounded-xl
+              text-xs md:text-base transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
               <Typewriter
                 text="Projekte"
                 className="typewriter-cursor"
                 speed={TYPE_SPEED_TEXT}
               />
             </button>
-            <button className="px-4 py-2 md:px-8 md:py-4 border border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10
-              font-semibold rounded-lg md:rounded-xl text-xs md:text-base transition-all duration-300 hover:shadow-lg hover:border-cyan-400">
+            <button
+              className="px-4 py-2 md:px-8 md:py-4 border border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10
+              font-semibold rounded-lg md:rounded-xl text-xs md:text-base transition-all duration-300 hover:shadow-lg hover:border-cyan-400"
+            >
               <Typewriter
                 text="Über mich"
                 className="typewriter-cursor"
@@ -172,8 +184,8 @@ export default function Home() {
 
             {/* Methodology steps */}
             <div className="grid gap-8 md:grid-cols-3 mt-16">
-              <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-6 border border-slate-700/30 min-h-[160px] md:min-h-[180px] flex flex-col">
-                <div className="text-3xl mb-4">🔍</div>
+              <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-6 border border-slate-700/30 min-h-[160px] md:min-h-[180px] flex flex-col items-center">
+                <FaChartBar className=" text-3xl mb-4" />
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">
                   <Typewriter
                     text="Analyse"
@@ -189,8 +201,8 @@ export default function Home() {
                   />
                 </p>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-6 border border-slate-700/30 min-h-[160px] md:min-h-[180px] flex flex-col">
-                <div className="text-3xl mb-4">⚡</div>
+              <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-6 border border-slate-700/30 min-h-[160px] md:min-h-[180px] flex flex-col items-center">
+                <FaCode className="text-3xl mb-4" />
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">
                   <Typewriter
                     text="Entwicklung"
@@ -206,8 +218,8 @@ export default function Home() {
                   />
                 </p>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-6 border border-slate-700/30 min-h-[160px] md:min-h-[180px] flex flex-col">
-                <div className="text-3xl mb-4">🚀</div>
+              <div className="bg-slate-800/50 backdrop-blur rounded-2xl p-6 border border-slate-700/30 min-h-[160px] md:min-h-[180px] flex flex-col items-center">
+                <FaRocket className="text-3xl mb-4" />
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">
                   <Typewriter
                     text="Optimierung"
@@ -240,7 +252,10 @@ export default function Home() {
 
             <div className="grid gap-8 md:grid-cols-2">
               {testimonials.map(({ text, author }) => (
-                <div key={author} className="bg-slate-800/70 backdrop-blur rounded-2xl p-8 border border-slate-700/50 min-h-[200px] flex flex-col">
+                <div
+                  key={author}
+                  className="bg-slate-800/70 backdrop-blur rounded-2xl p-8 border border-slate-700/50 min-h-[200px] flex flex-col"
+                >
                   <div className="text-cyan-400 text-4xl mb-4">"</div>
                   <p className="text-slate-300 leading-relaxed mb-6 italic flex-1 line-clamp-6">
                     <Typewriter
@@ -290,7 +305,9 @@ export default function Home() {
                   hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2
                   border border-slate-700/50 hover:border-cyan-500/30 min-h-[250px] md:min-h-[280px] flex flex-col"
                 >
-                  <div className="text-4xl mb-4">{icon}</div>
+                  <div className="flex justify-center items-center mb-4">
+                    {icon}
+                  </div>
                   <h3 className="text-xl font-bold text-cyan-400 mb-4">
                     <Typewriter
                       text={title}
@@ -307,8 +324,10 @@ export default function Home() {
                   </p>
 
                   {/* Hover effect accent */}
-                  <div className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
-                    rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div
+                    className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
+                    rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
                 </div>
               ))}
             </div>

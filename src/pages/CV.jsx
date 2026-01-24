@@ -5,24 +5,40 @@ import { TYPE_SPEED_TITLE, TYPE_SPEED_TEXT } from "../constants";
 
 const timeline = [
   {
-    year: "2020",
-    title: "Studium",
-    description: "Beginn des Informatikstudiums mit Fokus auf Softwareentwicklung und Webtechnologien."
+    year: "2005 - 2013",
+    title: "Primarschule",
+    description: "Primarschule Notker, Gossau SG."
   },
   {
-    year: "2022",
-    title: "Erste Projekte",
-    description: "Entwicklung erster vollständiger Webanwendungen mit React und Node.js."
+    year: "2013 - 2016",
+    title: "Sekundarschule",
+    description: "Sekundarschule, Oberstufenzentrum Buechenwald, Gossau SG."
   },
   {
-    year: "2023",
-    title: "Vertiefung Frontend",
-    description: "Spezialisierung auf moderne Frontend-Frameworks und UI/UX-Prinzipien."
+    year: "2016 - 2020",
+    title: "Berufslehre: Schreiner",
+    description: "Berufslehre als Schreiner EFZ bei der HR Rechsteiner AG, Gossau SG."
   },
   {
-    year: "2024",
-    title: "Professionelle Erfahrung",
-    description: "Arbeit an kommerziellen Projekten und kontinuierliche Weiterentwicklung."
+    year: "Aug. 2020 - Dez. 2020",
+    title: "Schreiner",
+    description: "Berufstätigkeit als Schreiner bei der Koster Holzwelten AG, Arnegg SG."
+  },
+  {
+    year: "Jan. 2021 - Mai 2021",
+    title: "Rekrutenschule",
+    description: "Absolvierung der Rekrutenschule der Schweizer Armee."
+  },
+  {
+    year: "Aug. 2021 - Aug. 2025",
+    title: "Berufslehre: Informatiker",
+    description:
+      "Berufslehre als Informatiker EFZ, Fachrichtung Applikationsentwicklung, bei der Abacus Research AG, Wittenbach SG."
+  },
+  {
+    year: "Aug. 2025 - heute",
+    title: "Informatiker",
+    description: "Berufstätigkeit als Informatiker bei der Abacus Research AG, Wittenbach SG."
   }
 ];
 
@@ -49,7 +65,7 @@ export default function CV() {
           {/* Description */}
           <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16">
             <Typewriter
-              text="Mein beruflicher Werdegang und technische Expertise im Überblick."
+              text="Meine Grundbildung, Ausbildungen sowie der berufliche Werdegang im Überblick."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />
@@ -86,7 +102,7 @@ export default function CV() {
                     } text-center md:text-left`}>
                        <div className="group bg-slate-800/70 backdrop-blur rounded-2xl p-6
                          hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2
-                         border border-slate-700/50 hover:border-cyan-500/30 min-h-[250px] md:min-h-[280px] flex flex-col">
+                         border border-slate-700/50 hover:border-cyan-500/30 min-h-[220px] md:min-h-[230px] flex flex-col">
                          <div className="text-cyan-400 font-semibold mb-2">
                            <Typewriter
                              text={year}
@@ -118,41 +134,6 @@ export default function CV() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Skills Overview */}
-          <div className="grid gap-8 md:grid-cols-3">
-             {skills.map(({ category, items }) => (
-               <div
-                 key={category}
-                 className="group bg-slate-800/70 backdrop-blur rounded-2xl p-6
-                 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2
-                 border border-slate-700/50 hover:border-cyan-500/30 min-h-[250px] md:min-h-[280px] flex flex-col"
-               >
-                 <h3 className="text-xl font-semibold mb-4 text-cyan-400">
-                   <Typewriter
-                     text={category}
-                     className="typewriter-cursor"
-                     speed={TYPE_SPEED_TITLE}
-                   />
-                 </h3>
-                 <div className="flex flex-wrap gap-2 flex-1">
-                   {items.map((skill) => (
-                     <span
-                       key={skill}
-                       className="px-3 py-1 bg-slate-700/50 text-slate-200 rounded-lg text-sm
-                       hover:bg-cyan-400/20 hover:text-cyan-300 transition-colors"
-                     >
-                       {skill}
-                     </span>
-                   ))}
-                 </div>
-
-                 {/* Hover effect accent */}
-                 <div className="mt-6 w-full h-1 bg-gradient-to-r from-cyan-500/0 via-cyan-500/50 to-cyan-500/0
-                   rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
-             ))}
           </div>
         </section>
       </PageContainer>
