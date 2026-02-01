@@ -20,9 +20,9 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-6 py-12">
         {/* Main content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
           {/* Brand section */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:pr-8">
             <h3 className="text-2xl font-bold text-white">Noah Balzan</h3>
             <p className="text-slate-400 leading-relaxed">
               Full Stack Developer, der komplexe Probleme in elegante digitale
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-center">
             <h3 className="text-xl font-semibold text-white mb-4">
               Soziale Medien
             </h3>
@@ -65,24 +65,28 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white mb-4">Kontakt</h3>
-            <div className="space-y-2">
-              <a
-                href="mailto:noah.balzan@bluewin.ch"
-                className="flex items-center space-x-3 hover:text-cyan-400 transition-all duration-300 group"
-              >
-                <div className="p-2 bg-slate-800/50 rounded-lg group-hover:bg-cyan-500/10 transition-colors">
-                  <FaEnvelope size={18} />
+          <div className="space-y-4 md:flex md:flex-col md:items-end">
+            <div className="space-y-4 flex flex-col items-center md:items-start">
+              <h3 className="text-xl font-semibold text-white mb-4">Kontakt</h3>
+
+              <div className="space-y-2 w-full flex flex-col items-center md:items-start">
+                <a
+                  href="mailto:noah.balzan@bluewin.ch"
+                  className="flex items-center space-x-3 hover:text-cyan-400 transition-all duration-300 group"
+                >
+                  <div className="p-2 bg-slate-800/50 rounded-lg group-hover:bg-cyan-500/10 transition-colors">
+                    <FaEnvelope size={18} />
+                  </div>
+                  <span className="text-slate-300">noah.balzan@bluewin.ch</span>
+                </a>
+
+                <div className="flex items-center space-x-3">
+                  <div className="p-2 bg-slate-800/50 rounded-lg">
+                    <FaMapMarkedAlt size={18} />
+                  </div>
+                  <span className="text-slate-300">Schweiz</span>
                 </div>
-                <span className="text-slate-300">noah.balzan@bluewin.ch</span>
-              </a>
-              <p className="flex items-center space-x-3">
-                <div className="p-2 bg-slate-800/50 rounded-lg group-hover:bg-cyan-500/10 transition-colors">
-                  <FaMapMarkedAlt size={18} />
-                </div>
-                <span className="text-slate-300">Schweiz</span>
-              </p>
+              </div>
             </div>
           </div>
         </div>

@@ -97,7 +97,7 @@ export default function CV() {
                     <div className="flex-shrink-0 w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900 relative z-10 mx-auto md:mx-0"></div>
 
                     {/* Content */}
-                    <div className={`flex-1 max-w-md ${
+                    <div className={`flex-1 w-full md:max-w-md ${
                       index % 2 === 0 ? 'md:text-right' : 'md:text-left'
                     } text-center md:text-left`}>
                        <div className="group bg-slate-800/70 backdrop-blur rounded-2xl p-6
