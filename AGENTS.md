@@ -4,7 +4,7 @@ This document provides comprehensive guidelines for agentic coding assistants wo
 
 ## Project Overview
 
-This is a personal portfolio website for Noah Balzan, built with:
+This is a personal portfolio website template, built with:
 - React 19.1.1
 - Vite 7.1.7
 - Tailwind CSS 4.1.13
@@ -301,5 +301,4 @@ When adding new features:
 ---
 
 **Last updated:** January 22, 2026
-**Project version:** 0.0.0</content>
-<parameter name="filePath">/home/noah/Documents/portfolio/AGENTS.md
+**Project version:** 0.0.0

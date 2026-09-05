@@ -51,7 +51,7 @@ export default function Header() {
             <div className="p-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition-colors">
               <HeaderIconCode className="w-5 h-5 text-cyan-400" />
             </div>
-            <h1 className="text-xl font-bold text-white hover:text-cyan-300 transition-colors">Noah Balzan</h1>
+            <h1 className="text-xl font-bold text-white hover:text-cyan-300 transition-colors">Max Mustermann</h1>
           </Link>
 
           {/* desktop navigation links */}

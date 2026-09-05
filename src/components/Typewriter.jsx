@@ -1,51 +1,92 @@
-import { useState, useEffect, useRef } from "react";
 import { useSequential } from "../hooks/useSequential";
+import { useState, useLayoutEffect, useRef, useId } from "react";
 
-export default function Typewriter({ text, speed = 50, className = "" }) {
+export default function Typewriter({ text = "", speed = 50, className = "" }) {
   const [displayed, setDisplayed] = useState("");
-  const [isTyping, setIsTyping] = useState(false); // cursor-status
+  const [isTyping, setIsTyping] = useState(false);
   const ref = useRef(null);
-  const triggeredRef = useRef(false);
-  const { register } = useSequential();
+  const id = useId();
+  const sequential = useSequential();
+  const register = sequential?.register;
+  const unregister = sequential?.unregister;
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !triggeredRef.current) {
-          triggeredRef.current = true;
-          observer.disconnect();
+  useLayoutEffect(() => {
+    const node = ref.current;
+    const content = text ?? "";
 
-          // register animation in queue
-          register(
-            () =>
-              new Promise((resolve) => {
-                setIsTyping(true); // start cursor
-                let i = 0;
-                const timer = setInterval(() => {
-                  setDisplayed(text.slice(0, i + 1));
-                  i++;
-                  if (i === text.length) {
-                    clearInterval(timer);
-                    setIsTyping(false); // disappear cursor
-                    resolve();
-                  }
-                }, speed);
-              })
-          );
+    if (!node) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (!register || prefersReducedMotion || !content) {
+      setDisplayed(content);
+      return;
+    }
+
+    let cancelled = false;
+    let timer = null;
+    let resolvePlay = null;
+
+    const finish = () => {
+      if (timer != null) {
+        clearInterval(timer);
+        timer = null;
+      }
+      if (!cancelled) setIsTyping(false);
+      resolvePlay?.();
+      resolvePlay = null;
+    };
+
+    const startFn = () =>
+      new Promise((resolve) => {
+        resolvePlay = resolve;
+        if (cancelled || !content) {
+          finish();
+          return;
         }
-      },
-      { threshold: 0.1 }
-    );
 
-    if (ref.current) observer.observe(ref.current);
+        setIsTyping(true);
+        let i = 0;
+        const step = () => {
+          if (cancelled) {
+            finish();
+            return false;
+          }
+          i += 1;
+          setDisplayed(content.slice(0, i));
+          if (i >= content.length) {
+            finish();
+            return false;
+          }
+          return true;
+        };
 
-    return () => observer.disconnect();
-  }, [text, speed, register]);
+        if (!step()) return;
+        timer = setInterval(() => {
+          if (!step()) return;
+        }, speed);
+      });
+
+    register(id, startFn, node);
+
+    return () => {
+      cancelled = true;
+      finish();
+      unregister?.(id);
+    };
+  }, [text, speed, register, unregister, id]);
 
   return (
-    <span ref={ref} className={className}>
-      {displayed}
-      {isTyping && <span className="inline-block ml-1 animate-blink">|</span>}
+    <span ref={ref} className={className} aria-label={text}>
+      <span aria-hidden="true">
+        {displayed}
+        {isTyping && (
+          <span className="inline-block ml-1 animate-blink">|</span>
+        )}
+        <span className="invisible">{text.slice(displayed.length)}</span>
+      </span>
     </span>
   );
 }

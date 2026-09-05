@@ -24,29 +24,29 @@ const stats = [
 
 const testimonials = [
   {
-    text: "Noah's Arbeit ist außergewöhnlich. Sauberer Code und kreative Lösungen.",
-    author: "Projektmanager, TechCorp",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+    author: "Projektmanager, Musterfirma AG",
   },
   {
-    text: "Professionell, zuverlässig und immer pünktlich. Sehr empfehlenswert!",
-    author: "CEO, StartupXYZ",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero.",
+    author: "CEO, Beispiel GmbH",
   },
 ];
 
 const focusCards = [
   {
     title: "Frontend",
-    text: "Moderne React-Anwendungen mit TypeScript, Tailwind CSS und optimierter Performance.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.",
     icon: <FaReact className=" text-3xl mb-4" />,
   },
   {
     title: "Code Quality",
-    text: "Sauberer, wartbarer Code mit Fokus auf Testing, Dokumentation und Best Practices.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.",
     icon: <FaCheckCircle className=" text-3xl mb-4" />,
   },
   {
     title: "UX & Design",
-    text: "Benutzerzentrierte Designs mit intuitiver Navigation und ansprechender Ästhetik.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.",
     icon: <FaPaintBrush className=" text-3xl mb-4" />,
   },
 ];
@@ -74,7 +74,7 @@ export default function Home() {
             Hi, ich bin{" "}
             <span className="text-cyan-400">
               <Typewriter
-                text="[Noah]"
+                text="[Name]"
                 className="typewriter-cursor"
                 speed={TYPE_SPEED_HERO}
               />
@@ -83,7 +83,7 @@ export default function Home() {
 
           <p className="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-4 md:mb-8 leading-relaxed line-clamp-3">
             <Typewriter
-              text="Full Stack Developer, der komplexe Probleme in elegante digitale Lösungen verwandelt."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />
@@ -91,35 +91,11 @@ export default function Home() {
 
           <p className="text-sm md:text-lg text-slate-400 max-w-2xl mx-auto mb-6 md:mb-12 leading-relaxed line-clamp-4">
             <Typewriter
-              text="Spezialisiert auf Entwicklung und Erweiterung von Businessoftware mit Fokus auf ERP-Systeme im Unternehmensumfeld."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />
           </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-row gap-3 md:gap-4 justify-center items-center">
-            <button
-              className="px-4 py-2 md:px-8 md:py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold rounded-lg md:rounded-xl
-              text-xs md:text-base transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              <Typewriter
-                text="Projekte"
-                className="typewriter-cursor"
-                speed={TYPE_SPEED_TEXT}
-              />
-            </button>
-            <button
-              className="px-4 py-2 md:px-8 md:py-4 border border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10
-              font-semibold rounded-lg md:rounded-xl text-xs md:text-base transition-all duration-300 hover:shadow-lg hover:border-cyan-400"
-            >
-              <Typewriter
-                text="Über mich"
-                className="typewriter-cursor"
-                speed={TYPE_SPEED_TEXT}
-              />
-            </button>
-          </div>
         </div>
 
         {/* Scroll indicator - hidden on mobile */}
@@ -176,7 +152,7 @@ export default function Home() {
             </h2>
             <p className="text-slate-300 leading-relaxed text-lg md:text-xl mb-12">
               <Typewriter
-                text="Ich kombiniere technische Exzellenz mit kreativem Design, um digitale Lösungen zu schaffen, die nicht nur funktionieren, sondern begeistern."
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl gravida tempus."
                 className="typewriter-cursor"
                 speed={TYPE_SPEED_TEXT}
               />
@@ -195,7 +171,7 @@ export default function Home() {
                 </h3>
                 <p className="text-slate-300 text-sm leading-relaxed flex-1 line-clamp-3">
                   <Typewriter
-                    text="Verständnis für Ihre Bedürfnisse und Ziele entwickeln."
+                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                     className="typewriter-cursor"
                     speed={TYPE_SPEED_TEXT}
                   />
@@ -212,7 +188,7 @@ export default function Home() {
                 </h3>
                 <p className="text-slate-300 text-sm leading-relaxed flex-1 line-clamp-3">
                   <Typewriter
-                    text="Saubere, skalierbare Lösungen implementieren."
+                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                     className="typewriter-cursor"
                     speed={TYPE_SPEED_TEXT}
                   />
@@ -229,7 +205,7 @@ export default function Home() {
                 </h3>
                 <p className="text-slate-300 text-sm leading-relaxed flex-1 line-clamp-3">
                   <Typewriter
-                    text="Performance und User Experience kontinuierlich verbessern."
+                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                     className="typewriter-cursor"
                     speed={TYPE_SPEED_TEXT}
                   />
@@ -290,7 +266,7 @@ export default function Home() {
               </h2>
               <p className="text-slate-400 max-w-2xl mx-auto">
                 <Typewriter
-                  text="Meine Kernkompetenzen und Spezialisierungen im Überblick"
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                   className="typewriter-cursor"
                   speed={TYPE_SPEED_TEXT}
                 />

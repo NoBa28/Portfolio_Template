@@ -5,43 +5,43 @@ import { TYPE_SPEED_TITLE, TYPE_SPEED_TEXT } from "../constants";
 
 const timeline = [
   {
-    year: "2005 - 2013",
-    title: "Primarschule",
-    description: "Primarschule, Gossau SG.",
+    year: "2010 - 2014",
+    title: "Grundschule",
+    description: "Lorem ipsum dolor sit amet, Musterstadt.",
   },
   {
-    year: "2013 - 2016",
+    year: "2014 - 2018",
     title: "Sekundarschule",
-    description: "Sekundarschule, Oberstufenzentrum, Gossau SG.",
+    description: "Lorem ipsum dolor sit amet, Musterstadt.",
   },
   {
-    year: "2016 - 2020",
-    title: "Berufslehre: Schreiner",
+    year: "2018 - 2022",
+    title: "Ausbildung",
     description:
-      "Berufslehre als Schreiner EFZ bei der HR Rechsteiner AG, Gossau SG.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Musterstadt.",
   },
   {
-    year: "Aug. 2020 - Dez. 2020",
-    title: "Schreiner",
+    year: "2022 - 2022",
+    title: "Berufstätigkeit",
     description:
-      "Berufstätigkeit als Schreiner bei der Koster Holzwelten AG, Arnegg SG.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Musterstadt.",
   },
   {
-    year: "Jan. 2021 - Mai 2021",
-    title: "Rekrutenschule",
-    description: "Absolvierung der Rekrutenschule der Schweizer Armee.",
+    year: "2022 - 2022",
+    title: "Weiterbildung",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    year: "Aug. 2021 - Aug. 2025",
-    title: "Berufslehre: Informatiker",
+    year: "2023 - 2025",
+    title: "Studium / Ausbildung",
     description:
-      "Berufslehre als Informatiker EFZ, Fachrichtung Applikationsentwicklung, bei der Abacus Research AG, Wittenbach SG.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Musterstadt.",
   },
   {
-    year: "Aug. 2025 - heute",
-    title: "Informatiker",
+    year: "2025 - heute",
+    title: "Aktuelle Position",
     description:
-      "Berufstätigkeit als Informatiker bei der Abacus Research AG, Wittenbach SG.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, Musterstadt.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function CV() {
           {/* Description */}
           <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16">
             <Typewriter
-              text="Meine Grundbildung, Ausbildungen sowie der berufliche Werdegang im Überblick."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />

@@ -8,22 +8,22 @@ const values = [
   {
     icon: <FaBullseye className=" text-3xl mb-4" />,
     title: "Präzision",
-    description: "Achte auf Details und liefere sauberen, wartbaren Code.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     icon: <FaLightbulb className=" text-3xl mb-4" />,
     title: "Innovation",
-    description: "Halte mich über neue Technologien auf dem Laufenden.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     icon: <FaUsers className=" text-3xl mb-4" />,
     title: "Zusammenarbeit",
-    description: "Werte Teamarbeit und offene Kommunikation.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     icon: <FaBook className=" text-3xl mb-4" />,
     title: "Lernen",
-    description: "Lebenslanges Lernen ist der Schlüssel zum Erfolg.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
 
@@ -31,18 +31,26 @@ const personalInterests = [
   {
     category: "Technologie",
     items: [
-      "Neue Frameworks erkunden",
-      "Open-Source beitragen",
-      "Tech-Konferenzen besuchen",
+      "Lorem ipsum dolor sit amet",
+      "Consectetur adipiscing elit",
+      "Integer posuere erat a ante",
     ],
   },
   {
     category: "Persönlich",
-    items: ["Sport treiben", "Kreatives Schreiben", "Reisen und neue Kulturen"],
+    items: [
+      "Lorem ipsum dolor sit amet",
+      "Consectetur adipiscing elit",
+      "Integer posuere erat a ante",
+    ],
   },
   {
     category: "Community",
-    items: ["Mentoring", "Wissensweitergabe", "Netzwerken mit Gleichgesinnten"],
+    items: [
+      "Lorem ipsum dolor sit amet",
+      "Consectetur adipiscing elit",
+      "Integer posuere erat a ante",
+    ],
   },
 ];
 
@@ -63,7 +71,7 @@ export default function About() {
           {/* Description */}
           <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16">
             <Typewriter
-              text="Meine Werte, Interessen und was mich als Mensch ausmacht."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />
@@ -81,14 +89,14 @@ export default function About() {
                   <div>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4">
                       <Typewriter
-                        text="Noah Balzan"
+                        text="Max Mustermann"
                         className="typewriter-cursor"
                         speed={TYPE_SPEED_TITLE}
                       />
                     </h2>
                     <p className="text-cyan-400 text-base md:text-lg font-medium mb-4 md:mb-6">
                       <Typewriter
-                        text="Full Stack Developer & kreativer Problemlöser"
+                        text="Lorem ipsum dolor sit amet"
                         className="typewriter-cursor"
                         speed={TYPE_SPEED_TEXT}
                       />
@@ -98,7 +106,7 @@ export default function About() {
                   <div className="space-y-4 md:space-y-6">
                     <p className="text-slate-300 leading-relaxed text-base md:text-lg">
                       <Typewriter
-                        text="Als leidenschaftlicher Entwickler verbinde ich technische Exzellenz mit menschlicher Kreativität. Ich glaube daran, dass der beste Code nicht nur funktioniert, sondern auch eine Geschichte erzählt."
+                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."
                         className="typewriter-cursor"
                         speed={TYPE_SPEED_TEXT}
                       />
@@ -119,13 +127,13 @@ export default function About() {
                     >
                       <div className="text-center text-slate-500">
                         <div className="text-4xl md:text-6xl mb-4 md:mb-6 font-bold text-cyan-400">
-                          NB
+                          MM
                         </div>
                         <p className="text-base md:text-lg font-medium text-slate-400 mb-2">
-                          Noah Balzan
+                          Max Mustermann
                         </p>
                         <p className="text-xs md:text-sm text-slate-500">
-                          Full Stack Developer
+                          Berufsbezeichnung
                         </p>
                         <div className="mt-3 md:mt-4 flex justify-center space-x-2">
                           <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-cyan-400 rounded-full animate-pulse"></div>
@@ -148,14 +156,14 @@ export default function About() {
             >
               <blockquote className="text-xl md:text-2xl text-slate-200 font-medium max-w-3xl mx-auto mb-6 leading-relaxed">
                 <Typewriter
-                  text='"Jeder großartige Code beginnt mit einer Idee. Jeder erfolgreiche Entwickler mit der Bereitschaft, Grenzen zu überschreiten."'
+                  text='"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis."'
                   className="typewriter-cursor"
                   speed={TYPE_SPEED_TEXT}
                 />
               </blockquote>
               <cite className="text-cyan-400 text-lg font-semibold">
                 <Typewriter
-                  text="- Meine Entwickler-Philosophie"
+                  text="- Lorem ipsum dolor sit amet"
                   className="typewriter-cursor"
                   speed={TYPE_SPEED_TEXT}
                 />
@@ -174,7 +182,7 @@ export default function About() {
             </h2>
             <p className="text-slate-400 text-center mb-12 max-w-2xl mx-auto">
               <Typewriter
-                text="Die Prinzipien, die meine Arbeit und mein Leben leiten"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 className="typewriter-cursor"
                 speed={TYPE_SPEED_TEXT}
               />
@@ -231,7 +239,7 @@ export default function About() {
               </h2>
               <p className="text-slate-400 max-w-xl mx-auto">
                 <Typewriter
-                  text="Was mich antreibt und wie ich die Balance zwischen Arbeit und Leben halte"
+                  text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                   className="typewriter-cursor"
                   speed={TYPE_SPEED_TEXT}
                 />

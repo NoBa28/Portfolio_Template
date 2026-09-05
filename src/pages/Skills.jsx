@@ -9,11 +9,11 @@ const skillCategories = [
     category: "Programmiersprachen",
     icon: <FaLaptopCode className=" text-3xl mb-4" />,
     skills: [
-      { name: "Java", level: 5 },
-      { name: "C", level: 5 },
-      { name: "C#", level: 4 },
       { name: "JavaScript", level: 4 },
-      { name: "Python", level: 2 },
+      { name: "TypeScript", level: 3 },
+      { name: "Python", level: 3 },
+      { name: "Java", level: 3 },
+      { name: "C#", level: 2 },
     ],
   },
   {
@@ -31,11 +31,11 @@ const skillCategories = [
     category: "Datenbanken & Tools",
     icon: <FaDatabase className=" text-3xl mb-4" />,
     skills: [
-      { name: "SQL", level: 5 },
-      { name: "NoSQL", level: 4 },
-      { name: "C-tree", level: 5 },
+      { name: "SQL", level: 4 },
+      { name: "MongoDB", level: 3 },
+      { name: "PostgreSQL", level: 3 },
       { name: "Git / GitHub", level: 4 },
-      { name: "SVN (TortoiseSVN)", level: 4 },
+      { name: "Docker", level: 3 },
     ],
   },
 ];
@@ -74,7 +74,7 @@ export default function Skills() {
           {/* Description */}
           <p className="text-slate-400 text-center max-w-2xl mx-auto mb-16">
             <Typewriter
-              text="Eine Übersicht meiner technischen Fähigkeiten. Die Sterne dienen als grobe Selbsteinschätzung meiner Erfahrung und Sicherheit im jeweiligen Bereich."
+              text="Die Sterne dienen als grobe Selbsteinschätzung."
               className="typewriter-cursor"
               speed={TYPE_SPEED_TEXT}
             />

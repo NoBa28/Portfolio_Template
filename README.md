@@ -1,4 +1,4 @@
-# Noah Balzan - Portfolio Website
+# Portfolio Template
 
 A modern, responsive portfolio website built with React 19, Vite, and Tailwind CSS, featuring sophisticated animations and a sleek dark theme design.
 
